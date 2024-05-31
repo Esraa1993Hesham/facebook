@@ -16,15 +16,15 @@ app.use("/posts",postRouter)
 app.use("/user",userRouter)
 app.use("/comments",commentRouter)
 
-
-app.use("*",(req,res,next)=>{
-res.status(404).json({msg:"sorry not found"})
-
-})
 app.get("/",(req,res,next)=>{
     res.status(200).json({msg:"hello in my project"})
     
     })
+app.use("*",(req,res,next)=>{
+res.status(404).json({msg:"sorry not found"})
+
+})
+
     
 
 
